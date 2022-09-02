@@ -9,8 +9,6 @@ def cancel(f):
 
 
 def addfile(n):
-    print("adding")
-    
     path="/Users/dharmishasharma/Desktop/Wiki project/"+n+".txt"
     newfile=open(path,'w')
     newfile.write(txt.get(1.0, END))
@@ -21,25 +19,23 @@ def addfile(n):
     f.close()
     f=open('sports.txt','w')
     f.write(sname)
-    f.close()
-    flabel.pack_forget()
-    fnametext.pack_forget()
-    tlabel.pack_forget()
-    donebutton.pack_forget()
+    f.close() 
     
 
 def add(n,f):
     for w in f.winfo_children():
         w.destroy()
+    
     global donebutton 
-    donebutton = Button(f,text="Done",command = lambda: addfile(n))
+    donebutton = Button(f,text="Done",command = lambda: [addfile(n),cancel(f)])
     donebutton.pack(side=RIGHT)
-    global cancelbutton 
+    """global cancelbutton 
     cancelbutton= Button(f,text="Exit",command=lambda :cancel(f))
-    cancelbutton.pack(side=RIGHT)
+    cancelbutton.pack(side=RIGHT)"""
     global tlabel 
     tlabel= Label(f,text="Please write the contents of your article")
     tlabel.pack()
     global txt
     txt=Text(f)
     txt.pack()
+    addfile(n)

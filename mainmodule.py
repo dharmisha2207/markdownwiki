@@ -25,7 +25,6 @@ photo_label=Label(f1, image=photo)
 photo_label.pack()
 
 
-
 #Frame 2 - dropdown
 
 f2=Frame(root,bg="skyblue", width=250,borderwidth=6)
@@ -55,9 +54,6 @@ def remove():
     f=open("sports.txt",'w')
     f.write(final)
     listbox.delete(index)
-
-
-
 
 """def selected(event):
     
@@ -89,7 +85,6 @@ lb = Label(f2,text="Select your choice of sport",bg='skyblue', font =("Arial", 1
 lb.pack()
 
 
-
 def items_selected(event):
     l=open("sports.txt")
     l1=l.read()
@@ -107,9 +102,7 @@ def items_selected(event):
     htmllabel=HTMLLabel(f3,background="white",height=450)
     htmllabel.set_html(txt)
     htmllabel.pack(fill="both", expand=True)
-
     
-
 listbox.bind('<<ListboxSelect>>', items_selected)
 
 l=open("sports.txt")
@@ -123,12 +116,16 @@ listbox.pack()
 
 def addlist():
     name = askstring('File Name', 'Please enter the file name')
-    answer = messagebox.askyesno("Question","Do you want to continue?")
-    if answer ==True:
-        add(name,f3)
-        listbox.insert(END,name)
+    if name in sl:
+            messagebox.showwarning("show warning", "File already exists!")
+            cancel(f3)
     else:
-        cancel(f3)
+        answer = messagebox.askyesno("Question","Do you want to continue?")
+        if answer ==True:
+            add(name,f3)
+            listbox.insert(END,name)
+        else:
+            cancel(f3)
 
 
 def setselfile():
@@ -151,4 +148,3 @@ deletebut.pack(side=RIGHT)
 homepage(f3)
 
 root.mainloop()
-
