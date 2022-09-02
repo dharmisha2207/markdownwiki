@@ -13,8 +13,11 @@ from tkinter.simpledialog import askstring
 #root
 root=Tk()
 root.title("Sportspedia")
-root.geometry('1200x750')
-root.maxsize(1200,750)
+width= root.winfo_screenwidth()               
+height= root.winfo_screenheight()               
+root.geometry("%dx%d" % (width, height))
+
+#root.maxsize(1200,800)
 
 #Frame 1 - photo and buttons( add, home, edit)
 
@@ -40,47 +43,28 @@ f3.pack(fill="both")
 
 selfile = "home"
 
-listbox=Listbox(f2)
+# List of sports
+
+listbox=Listbox(f2,height=100)
 listbox.configure(background='skyblue',fg='black',borderwidth=2)
 
 def remove():
-    f=open("sports.txt")
-    t=f.read().split(", ")
-    t.remove(selfile)
-    final=t[0]
-    for i in range(1,len(t)):
-        final = final + ", " + t[i]
-    f.close()
-    f=open("sports.txt",'w')
-    f.write(final)
-    listbox.delete(index)
+    answer=messagebox.askyesno("Question", "Are you sure?")
+    if answer==True:
+        f=open("sports.txt")
+        t=f.read().split(", ")
+        t.remove(selfile)
+        final=t[0]
+        for i in range(1,len(t)):
+            final = final + ", " + t[i]
+        f.close()
+        f=open("sports.txt",'w')
+        f.write(final)
+        listbox.delete(index)
+        delete(f3,selfile)
 
-"""def selected(event):
-    
-    for w in f3.winfo_children():
-        w.destroy()
-    global selfile
-    selfile=clicked.get()
-    filename = selfile +".txt"
-    file = open(filename)
-    txt=file.read()
-    htmllabel=HTMLLabel(f3,background="white",height=450)
-    htmllabel.set_html(txt)
-    htmllabel.pack(fill="both", expand=True)
-    deletebut.bind("<Button 1>", remove()) 
 
-def dropdown():
-    opsfile=open("sports.txt",'r')
-    ops=opsfile.read()
-    sportslist=ops.split(", ")
-    global clicked
-    clicked=StringVar()
-    clicked.set("Choose your genre of sports")
-    global drop 
-    drop=OptionMenu(f2, clicked, *sportslist ,command=selected)
-    drop.pack()
 
-dropdown()"""
 lb = Label(f2,text="Select your choice of sport",bg='skyblue', font =("Arial", 15),fg='black',borderwidth=2,relief='solid')
 lb.pack()
 
@@ -94,7 +78,7 @@ def items_selected(event):
     ind=listbox.curselection()
     index=ind[0]
     selfile=sl[index]
-    f=open(selfile+".txt")
+    f=open("Html_Articles/"+selfile+".html")
     txt=f.read()
     f.close()
     for w in f3.winfo_children():
@@ -123,7 +107,20 @@ def addlist():
         answer = messagebox.askyesno("Question","Do you want to continue?")
         if answer ==True:
             add(name,f3)
-            listbox.insert(END,name)
+            #listbox.insert(END,name)
+            listbox.delete(0,END)
+            sf=open("sports.txt")
+            sft=sf.read()
+            l=sft.split(", ")
+            l.append(name)
+            l.sort()
+            for i in range(0,len(l)):
+                listbox.insert(i,l[i])
+            sf.close()
+            """sf=open("sports.txt",'w')
+            sf.write(names)"""
+            
+            
         else:
             cancel(f3)
 
@@ -141,9 +138,9 @@ addb.pack(side=RIGHT, padx=100)
 homeb=Button(f1, text="Home",command = lambda : [homepage(f3), setselfile()])
 homeb.pack(side=RIGHT,padx=100)
 
-deletebut=Button(f1,text="Remove",command=lambda:[delete(f3,selfile),remove()])
+deletebut=Button(f1,text="Remove",command=lambda:remove())
+#delete(f3,selfile),
 deletebut.pack(side=RIGHT)
-#deletebut.bind("<Button 1>", remove)
 
 homepage(f3)
 

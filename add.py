@@ -3,24 +3,33 @@ from tkinter import messagebox
 from tkhtmlview import HTMLLabel
 from home import *
 from dropdown import *
+from Parse import *
 
 def cancel(f):
     homepage(f)
 
 
 def addfile(n):
-    path="/Users/dharmishasharma/Desktop/Wiki project/"+n+".txt"
+    path="Markdown_Articles/"+n+".md"
     newfile=open(path,'w')
     newfile.write(txt.get(1.0, END))
     newfile.close()
+    Parse_File(path)
+    
+
     f=open('sports.txt','r')
     sname = f.read()
-    sname+=", "+n
+    l=sname.split(", ")
+    l.append(n)
+    l.sort()
+    names=l[0]
+    for i in range(1,len(l)):
+        names=names+", "+l[i]
     f.close()
-    f=open('sports.txt','w')
-    f.write(sname)
-    f.close() 
-    
+    f=open("sports.txt",'w')
+    f.write(names)
+    f.close()
+    messagebox.showinfo("showinfo", "Article successfully added")
 
 def add(n,f):
     for w in f.winfo_children():
@@ -38,4 +47,3 @@ def add(n,f):
     global txt
     txt=Text(f)
     txt.pack()
-    addfile(n)

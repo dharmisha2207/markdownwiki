@@ -12,7 +12,7 @@ global htmllabel
 def homepage(f):
     for w in f.winfo_children():
         w.destroy()
-    home=open("home.txt")
+    home=open("home.html")
     hometxt=home.read()
     htmllabel=HTMLLabel(f,background="white",height=450)
     htmllabel.set_html(hometxt)
