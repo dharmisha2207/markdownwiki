@@ -46,6 +46,5 @@ The major competitions for men and women events are the short and long course wo
 
 -  Synchronized Swimming  — athletes perform synchronized dance routines to music while floating in the water.
 
-## Related Pages
 
--  More  [about the sport of swimming](https://www.topendsports.com/sport/swimming/index.htm)
+

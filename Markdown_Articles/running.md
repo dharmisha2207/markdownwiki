@@ -41,6 +41,5 @@ Running races range from jogging to sprinting and unlike [walking](https://www.t
 
 -  **Tower Running** — grueling races up tall man-made structures. Also known as Stair Climbing.
 
-## Related Pages
 
--  [The Olympic Games marathon](https://www.topendsports.com/events/summer/sports/marathon.htm)
+

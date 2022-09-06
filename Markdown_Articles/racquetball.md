@@ -30,6 +30,5 @@ Players should equip themselves with a racquetball racket and racquetball eye gu
 
 -  Wallyball  — a variation of volleyball, that is played on a racquetball court enclosed with walls on all four sides.
 
-## Related Pages
 
--  List of  [Racket Sports](https://www.topendsports.com/sport/racquet-sports.htm)
+

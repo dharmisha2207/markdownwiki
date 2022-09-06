@@ -1,13 +1,14 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinterweb import HtmlFrame
-from tkhtmlview import HTMLLabel
+from html_parser import HTMLLabel
 from tkinter import messagebox
 from home import *
 from edit import *
 from add import *
 from delete import *
 from tkinter.simpledialog import askstring
+import globalvars
 #from dropdown import *
 
 #root
@@ -24,8 +25,8 @@ root.geometry("%dx%d" % (width, height))
 f1=Frame(root,bg="skyblue",borderwidth=6)
 f1.pack(side=TOP,fill="x")
 photo=PhotoImage(file='sportspedia.png')
-photo_label=Label(f1, image=photo)
-photo_label.pack()
+#photo_label=Label(f1, image=photo)
+#photo_label.pack()
 
 
 #Frame 2 - dropdown
@@ -41,7 +42,7 @@ f3 = Frame(root)
 f3.pack(fill="both")
 
 
-selfile = "home"
+globalvars.selfile = "home"
 
 # List of sports
 
@@ -53,7 +54,7 @@ def remove():
     if answer==True:
         f=open("sports.txt")
         t=f.read().split(", ")
-        t.remove(selfile)
+        t.remove(globalvars.selfile)
         final=t[0]
         for i in range(1,len(t)):
             final = final + ", " + t[i]
@@ -61,7 +62,7 @@ def remove():
         f=open("sports.txt",'w')
         f.write(final)
         listbox.delete(index)
-        delete(f3,selfile)
+        delete(f3,globalvars.selfile)
 
 
 
@@ -73,18 +74,18 @@ def items_selected(event):
     l=open("sports.txt")
     l1=l.read()
     sl=l1.split(", " )
-    global selfile
     global index
     ind=listbox.curselection()
     index=ind[0]
-    selfile=sl[index]
-    f=open("Html_Articles/"+selfile+".html")
+    globalvars.selfile=sl[index].strip()
+    f=open("Html_Articles/"+globalvars.selfile+".html")
     txt=f.read()
     f.close()
     for w in f3.winfo_children():
         w.destroy()
     htmllabel=HTMLLabel(f3,background="white",height=450)
     htmllabel.set_html(txt)
+    #htmllabel.on_link_click
     htmllabel.pack(fill="both", expand=True)
     
 listbox.bind('<<ListboxSelect>>', items_selected)
@@ -126,21 +127,21 @@ def addlist():
 
 
 def setselfile():
-    global selfile
-    selfile = "home"
+    globalvars.selfile = "home"
+    
+homeb=Button(f1, image=photo,command = lambda : [homepage(f3), setselfile()])
+homeb.pack(side=TOP,padx=100)
 
-editb=Button(f1, text="Edit",command = lambda: edit(f3,selfile))
-editb.pack(side=RIGHT,padx=100)
-
-addb=Button(f1, text="Add new",command=addlist)
-addb.pack(side=RIGHT, padx=100)
-
-homeb=Button(f1, text="Home",command = lambda : [homepage(f3), setselfile()])
-homeb.pack(side=RIGHT,padx=100)
 
 deletebut=Button(f1,text="Remove",command=lambda:remove())
-#delete(f3,selfile),
-deletebut.pack(side=RIGHT)
+#delete(f3,globalvars.selfile),
+deletebut.pack(side=LEFT)
+
+editb=Button(f1, text="Edit",command = lambda: edit(f3,globalvars.selfile))
+editb.pack(side=LEFT)
+
+addb=Button(f1, text="Add new",command=addlist)
+addb.pack(side=LEFT)
 
 homepage(f3)
 

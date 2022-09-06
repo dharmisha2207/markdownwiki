@@ -46,8 +46,5 @@ Skateboarding will make its Olympic debut at the 2020 Tokyo Olympic Games, with 
 
 -  **Scootering** — doing tricks, over obstacles and terrains, on a scooter.
 
-## Related Pages
 
--  More about  [Roller Sports](https://www.topendsports.com/sport/roller-sports.htm)
 
--  Complete  [list of sports](https://www.topendsports.com/sport/list/index.htm)

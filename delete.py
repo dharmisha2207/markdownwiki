@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 from tkinterweb import HtmlFrame
-from tkhtmlview import HTMLLabel
+from html_parser import HTMLLabel
 import os
 from home import *
 

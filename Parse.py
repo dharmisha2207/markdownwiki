@@ -281,9 +281,8 @@ directory="Markdown_Articles"
 
 for fname in os.listdir(directory):
     f=os.path.join(directory,fname)
-
+    
     if os.path.isfile(f):
-        print(f)
         Parse_File(f)
 
 

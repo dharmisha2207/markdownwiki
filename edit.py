@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 #from tkinterweb import HtmlFrame
-from tkhtmlview import HTMLLabel
+from html_parser import HTMLLabel
 from home import *
 from Parse import *
 
@@ -18,14 +18,15 @@ def save(f,sf):
     messagebox.showinfo("Information","Congratulations! Your changes are saved!")
     txtbox.pack_forget()
 
-def update(event):
 
+def update(event):
+    
+    #print("update")
     t=txtbox.get(1.0,END)
     t_html=Parse_Markdown_str(t)
     htmllabel.set_html(t_html)
+    #htmllabel.set_html(t_html)
 
-   
-    
 
 def edit(f,sf):
     for w in f.winfo_children():

@@ -28,8 +28,5 @@ The International Table Tennis Federation (ITTF), the highest governing body for
 
 -  **Road Tennis**  — a version of tennis played on a smaller court with paddles and a low wooden net, like a giant version of table tennis.
 
-## Related Pages
 
--  [Table Tennis at the Olympics](https://www.topendsports.com/events/summer/sports/table-tennis.htm)
 
--  Complete  [list of sports](https://www.topendsports.com/sport/list/index.htm)

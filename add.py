@@ -1,8 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-from tkhtmlview import HTMLLabel
+from html_parser import HTMLLabel
 from home import *
-from dropdown import *
 from Parse import *
 
 def cancel(f):

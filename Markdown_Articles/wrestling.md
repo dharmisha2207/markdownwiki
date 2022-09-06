@@ -74,8 +74,4 @@ There are two wrestling styles which are included in the Olympic Games, and are 
 
 -  Vajra-mushti  — an Indian martial art in which a knuckleduster-like weapon called the Vajra-mushti is employed.
 
-## Sports Related to Wrestling
 
--  Steer wrestling — part of  [Rodeo](https://www.topendsports.com/sport/list/rodeo.htm)  events.
-
--  [Martial Arts](https://www.topendsports.com/sport/martial-arts/index.htm)  — list of martial arts sports.

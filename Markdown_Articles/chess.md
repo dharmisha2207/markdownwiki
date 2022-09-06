@@ -19,8 +19,5 @@ The game has some official recognition, with the World Chess Federation an IOC R
 
 -  **Bridge**  — a card game that is played by four players, playing in two competing partnerships. Players score points based on the number of tricks achieved.
 
-## Related Pages
 
--  About  [Mind Sports](https://www.topendsports.com/sport/mind-sports.htm)
 
--  About the  [World Mind Sports Events](https://www.topendsports.com/events/games/mind-sports/index.htm)

@@ -38,8 +38,9 @@ At the 1900 Paris Olympics, Archery was approved as Summer Olympics sport. The o
 
 -  Hunting  — an activity that involves tracking and killing animals with various weapons.
 
-## Related Pages
 
--  See  [more about Archery](https://www.topendsports.com/sport/archery/index.htm)
 
--  [Archery at the Olympics](https://www.topendsports.com/events/summer/sports/archery.htm)
+
+
+
+

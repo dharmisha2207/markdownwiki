@@ -23,9 +23,6 @@ Nowadays, for official games all equipment is regulated. For the men’s game th
 -   Korfball  — a mixed-gender ball sport that is similar to netball and basketball, developed in The Netherlands.
 -   Water Basketball — a mix of basketball and water polo played in a swimming pool with basketball goals.
 
-## Related Pages
 
--   [Basketball at the Olympics](https://www.topendsports.com/events/summer/sports/basketball.htm)
--   Complete  [list of sports](https://www.topendsports.com/sport/list/index.htm)
--   The  [Encyclopedia of Sports ](https://www.topendsports.com/sport/encyclopedia.htm)
+
 

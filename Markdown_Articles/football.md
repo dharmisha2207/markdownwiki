@@ -12,14 +12,11 @@ Players have different methods of moving the ball depending on the code, such as
 
 ## Common Major Football Codes
 
--   [](https://www.topendsports.com/sport/list/football-american.htm)[Association Football (Soccer)](https://www.topendsports.com/sport/list/football-association.htm)
--   [Rugby Union](https://www.topendsports.com/sport/list/rugby-union.htm)
--   [Rugby League](https://www.topendsports.com/sport/list/rugby-league.htm)
--   [American Football](https://www.topendsports.com/sport/list/football-american.htm)
--   [Australian Football](https://www.topendsports.com/sport/list/football-australian.htm
+-   [Rugby Union]
+-   [Rugby League]
+-   [American Football]
+-   [Australian Footbal]
 
-## Related Pages
 
--   [Football Decoder](https://www.topendsports.com/sport/football-sports.htm)  — what is called  _football_  around the world?
--   Complete  [list of sports](https://www.topendsports.com/sport/list/index.htm)
--   The  [Encyclopedia of Sports](https://www.topendsports.com/sport/encyclopedia.htm)
+
+

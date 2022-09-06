@@ -49,6 +49,6 @@ The riders can participate individually or in teams. Organizations for cycling h
 
 -  **Snow biking**— uses a mountain bike on snow with fat tires.
 
-## Related Sports
 
--  [Skibobbing]( https://www.topendsports.com/sport/list/skibobbing.html) — a winter sport that uses a bicycle-type frame connected to skis called skibobs.
+
+
